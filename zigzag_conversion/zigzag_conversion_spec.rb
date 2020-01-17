@@ -16,4 +16,10 @@ describe 'convert' do
     let(:num_rows) { 4 }
     it { is_expected.to eq 'PINALSIGYAHRPI' }
   end
+
+  context do
+    let(:string) { "AB" }
+    let(:num_rows) { 1 }
+    it { is_expected.to eq 'AB' }
+  end
 end

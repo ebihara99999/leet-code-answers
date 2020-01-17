@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './string_to_integer.rb'
 
 describe 'my_atoi' do

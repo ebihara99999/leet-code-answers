@@ -1,4 +1,4 @@
-require './string_to_integer.rb'
+require './valid_parenthness.rb'
 
 describe 'is_valid' do
   subject { is_valid(string) }
@@ -10,6 +10,21 @@ describe 'is_valid' do
 
   context do
     let(:string) { "()" }
+    it { is_expected.to eq true }
+  end
+
+  context do
+    let(:string) { "(" }
+    it { is_expected.to eq false }
+  end
+
+  context do
+    let(:string) { "([)" }
+    it { is_expected.to eq false }
+  end
+
+  context do
+    let(:string) { "(([]){})" }
     it { is_expected.to eq true }
   end
 
